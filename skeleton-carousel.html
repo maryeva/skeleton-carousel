@@ -241,6 +241,7 @@
                          on-tap="prev"
                          disabled$="[[!showPrev]]"
                          hidden$="[[!nav]]"
+                         aria-label="previous slide"
       ></paper-icon-button>
       <iron-selector id="dots"
                      selected="{{selected}}"
@@ -251,6 +252,7 @@
         <template is="dom-repeat" items="[[_dots]]">
           <paper-icon-button icon="[[_iconDot(item, selected)]]"
                              disabled$="[[disabled]]"
+                             aria-label="change slides"
           ></paper-icon-button>
         </template>
       </iron-selector>
@@ -259,6 +261,7 @@
                          on-tap="next"
                          disabled$="[[!showNext]]"
                          hidden$="[[!nav]]"
+                         aria-label="next slide"
       ></paper-icon-button>
     </nav>
   </template>
